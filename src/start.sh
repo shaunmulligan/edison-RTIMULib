@@ -5,6 +5,9 @@ hostname $HOSTNAME
 
 modprobe i2c-dev
 udevd && udevadm trigger
+
+# Copy calibration file to /data so it persists
 # cd /RTIMULib/Linux/RTIMULibCal/Output && ./RTIMULibCal
-# cp /RTIMULib/Linux/RTIMULibCal/Output/RTIMULib.ini 
+# cp /RTIMULib/Linux/RTIMULibCal/Output/RTIMULib.ini /data
+
 python /usr/src/app/main.py

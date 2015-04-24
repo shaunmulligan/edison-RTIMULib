@@ -1,7 +1,7 @@
 #Base image
 FROM resin/i386-debian:jessie
 
-RUN apt-get update && apt-get install -y sudo usbutils python python-dev git-core cmake g++
+RUN apt-get update && apt-get install -y sudo usbutils python python-dev git-core cmake g++ module-init-tools
 
 RUN echo "/usr/local/lib" >> /etc/ld.so.conf
 
